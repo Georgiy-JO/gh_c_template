@@ -29,7 +29,7 @@ VALG_FILE = $(BUILD_DIR)/RESULT_VALGRIND.txt
 CPPCHECK_FILE = $(BUILD_DIR)/RESULT_CPPCHECK.txt
 
 # main files 
-# SRC_FILES = $(shell find . ! -path './test/*' -type  f -name '*.c')			# for dif file conf
+# SRC_FILES = $(shell find . ! -path './tests/*' -type  f -name '*.c')			# for dif file conf
 SRC_FILES = $(shell find $(SRC_DIR)/ -type  f -name '*.c')
 HEAD_FILES = $(shell find $(SRC_DIR)/ -type f -name '*.h')
 OBJ_FILES = $(addprefix $(OBJ_DIR)/, $(notdir $(SRC_FILES:.c=.o)))
