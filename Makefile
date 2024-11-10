@@ -22,7 +22,7 @@ CLANG = clang-format --style=Google
 # directories 
 BUILD_DIR = build
 SRC_DIR=src
-TEST_DIR=test
+TEST_DIR=tests
 OBJ_DIR = $(BUILD_DIR)/service_files
 COV_DIR = $(BUILD_DIR)/coverage
 VALG_FILE = $(BUILD_DIR)/RESULT_VALGRIND.txt

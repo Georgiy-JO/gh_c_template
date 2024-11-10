@@ -35,14 +35,14 @@ jobs:
     continue-on-error: true
 
 
-  format-check-test:
+  format-check-tests:
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v4
 
-      - name: Checking code style of test files
+      - name: Checking code style of tests files
         run: |
-          cd test
+          cd tests
           clang-format --style=Google -n $(find . -type f  -name *.c -o -name *.h)
           clang-format --style=Google -i $(find . -type f  -name *.c -o -name *.h)
           if ! git diff --quiet; then
@@ -267,7 +267,7 @@ jobs:
             echo "1" > status.txt            
           fi
 
-      - name: Test target cleaning test
+      - name: Tests target cleaning test
         run: |
           find . -type f -o -type d > before.txt
           make test
